@@ -1,0 +1,245 @@
+:root {
+  --charcoal: #211a13;
+  --cream: #f6efe1;
+  --gold: #d9a441;
+  --burnt: #b23a1f;
+  --burnt-dark: #7c2a17;
+  --olive: #4a5d3a;
+  --paper: #efe6d3;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: var(--cream);
+  color: var(--charcoal);
+}
+h1,
+h2,
+h3,
+h4,
+.display-font {
+  font-family: "Fraunces", serif;
+}
+
+.ticket {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--paper);
+  border: 1px dashed var(--burnt);
+  color: var(--burnt-dark);
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  padding: 0.35rem 0.9rem;
+  border-radius: 2px;
+  transform: rotate(-1.2deg);
+  margin-bottom: 1rem;
+}
+.ticket::before {
+  content: "№";
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+
+.navbar-kainan {
+  background: var(--charcoal);
+}
+.navbar-kainan .navbar-brand {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: var(--gold) !important;
+  letter-spacing: 0.03em;
+}
+.navbar-kainan .nav-link {
+  color: var(--cream) !important;
+  font-weight: 500;
+  margin-left: 0.35rem;
+}
+.navbar-kainan .nav-link:hover {
+  color: var(--gold) !important;
+}
+.btn-reserve {
+  background: var(--burnt);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+}
+.btn-reserve:hover {
+  background: var(--burnt-dark);
+  color: #fff;
+}
+
+.hero-carousel .carousel-item {
+  height: 78vh;
+  min-height: 420px;
+}
+.hero-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.52);
+}
+.hero-caption {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--cream);
+}
+.hero-caption h1 {
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  font-weight: 900;
+}
+.hero-caption .lead {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+}
+
+/* Keep the caption above carousel slides during fade transitions */
+.hero-caption {
+  z-index: 9999;
+  transition: none;
+}
+
+.hero-carousel .carousel-inner,
+.hero-carousel .carousel-item,
+.hero-carousel .carousel-item img {
+  z-index: 0;
+}
+
+section {
+  padding: 5rem 0;
+}
+.bg-charcoal {
+  background: var(--charcoal);
+  color: var(--cream);
+}
+.text-gold {
+  color: var(--gold);
+}
+.text-burnt {
+  color: var(--burnt);
+}
+
+.stat-num {
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  color: var(--gold);
+}
+
+.cat-pills .nav-link {
+  border: 1px solid var(--burnt);
+  color: var(--burnt-dark);
+  font-weight: 600;
+  margin: 0.25rem;
+  border-radius: 30px;
+}
+.cat-pills .nav-link.active {
+  background: var(--burnt) !important;
+  color: #fff !important;
+}
+
+.dish-card {
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(33, 26, 19, 0.08);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  height: 100%;
+}
+.dish-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(33, 26, 19, 0.22);
+}
+.dish-img-wrap {
+  overflow: hidden;
+  aspect-ratio: 4/3;
+}
+.dish-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+  cursor: pointer;
+}
+.dish-card:hover .dish-img-wrap img {
+  transform: scale(1.09);
+}
+.dish-card .card-body {
+  padding: 1.1rem 1.2rem 1.3rem;
+}
+.dish-card .card-title {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+}
+.badge-cat {
+  background: var(--olive);
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.price-tag {
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  color: var(--burnt);
+}
+
+.featured-card {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  height: 340px;
+}
+.featured-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+.featured-card:hover img {
+  transform: scale(1.06);
+}
+.featured-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.78), rgba(0, 0, 0, 0));
+  color: #fff;
+  padding: 1.5rem 1.25rem 1rem;
+}
+
+.accordion-button {
+  font-weight: 600;
+}
+.accordion-button:not(.collapsed) {
+  background: var(--paper);
+  color: var(--burnt-dark);
+}
+
+footer a.social-icon {
+  color: var(--cream);
+  font-size: 1.25rem;
+  margin-right: 1rem;
+}
+footer a.social-icon:hover {
+  color: var(--gold);
+}
+
+.divider-fork {
+  text-align: center;
+  color: var(--burnt);
+  font-size: 1.2rem;
+  margin: 0.5rem 0 2rem;
+}
